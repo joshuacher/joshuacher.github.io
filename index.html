@@ -1,0 +1,76 @@
+<!--
+  index.html - Personal GitHub Pages template
+  Instructions:
+   1) Upload your smiling photo to the repo root and replace "YOUR_PHOTO.jpg" below.
+   2) Replace VIDEO_ID with the YouTube video id (for https://www.youtube.com/watch?v=abcd1234 -> abcd1234).
+   3) Ensure index.css is in the same repo root (this file loads the styling).
+   4) Save both files to your repository root as index.html and index.css, then enable GitHub Pages (Settings → Pages → branch: main / folder: /root).
+
+  Note: the iframe uses autoplay=1&mute=1 so the video will attempt to autoplay muted on page load. Some browsers restrict autoplay behaviour depending on user settings.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Personal Page</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <main class="page">
+
+    <!-- LEFT: profile -->
+    <aside class="profile">
+      <!-- Replace YOUR_PHOTO.jpg with your photo filename (upload the file to the repo root) -->
+      <img class="profile-pic" src="YOUR_PHOTO.jpg" alt="Smiling photo of me">
+      <div class="name">Your Name</div>
+      <div class="role">Information Systems • SMU</div>
+
+      <div class="socials">
+        <span class="pill">Coding</span>
+        <span class="pill">Travel</span>
+      </div>
+    </aside>
+
+    <!-- RIGHT: content -->
+    <section class="content">
+      <h1>Hi — welcome to my site 👋</h1>
+
+      <!-- VIDEO: replace VIDEO_ID with the YouTube video id. Autoplays muted on load -->
+      <div class="video-wrap" aria-hidden="false">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&rel=0&playsinline=1"
+          title="Favorite travel destination video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+      <!-- BIO inside a box -->
+      <div class="bio-box">
+        <h2>About me</h2>
+        <p>
+          Hi! I'm [Your Name], an Information Systems undergrad at SMU. I like building small web projects, designing neat UIs, and planning my next travel trip. I made this page for class — hope you like it!
+        </p>
+      </div>
+
+      <!-- OPTIONAL: extra cards / details -->
+      <div class="grid-two">
+        <div class="bio-box">
+          <h3>Skills</h3>
+          <p style="margin-top:6px">HTML • CSS • JavaScript • Python</p>
+        </div>
+        <div class="bio-box">
+          <h3>Contact</h3>
+          <p style="margin-top:6px">email@example.com</p>
+        </div>
+      </div>
+
+      <footer>Built with ❤️ — deploy via GitHub Pages</footer>
+    </section>
+
+  </main>
+
+</body>
+</html>
