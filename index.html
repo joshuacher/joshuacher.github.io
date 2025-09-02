@@ -12,31 +12,35 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Personal Page</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Personal Page</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-  <main class="page">
+<main class="page">
 
     <!-- LEFT: profile -->
     <aside class="profile">
-        <!-- Replace YOUR_PHOTO.jpg with your photo filename (upload the file to the repo root) -->
         <img class="profile-pic" src="Images/ProfilePic.jpg">
         <div class="name">Joshua</div>
         <div class="role">Information Systems • SMU</div>
 
         <div class="socials">
-            <span class="pill">Music</span>
-            <span class="pill">Pets</span>
+            <span class="pill sleep-pill">
+                Sleep
+                <span class="tooltip">What does this mean</span>
+            </span>
+            <span class="pill pets-pill">
+                Pets
+                <span class="tooltip">Joshua has none because he would probably<br>not be a very good pet owner ;-;</span>
+            </span>
         </div>
 
         <!-- Spotify biobox below the pills -->
         <div class="spotify-box" aria-hidden="false">
             <h3>🎶 Favourite Songs 🎶</h3>
-            <!-- Replace TRACK_ID with the Spotify track ID you want to embed -->
             <div class="spotify-embed">
                 <iframe src="https://open.spotify.com/embed/track/6HuHyXviAdpmnQu73JHfBz" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" title="Spotify player"></iframe>
                 <iframe src="https://open.spotify.com/embed/track/01PSJFZbSRujjSk9d2Gbla" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" title="Spotify player"></iframe>
@@ -47,38 +51,38 @@
 
     <!-- RIGHT: content -->
     <section class="content">
-      <h1>✈️ Favourite Travel Destination — Hokkaido</h1>
+        <h1>✈️ Favourite Travel Destination — Hokkaido</h1>
 
-      <!-- VIDEO: replace VIDEO_ID with the YouTube video id. Autoplays muted on load -->
-      <div class="video-wrap" aria-hidden="false">
+    <!-- VIDEO -->
+    <div class="video-wrap" aria-hidden="false">
         <iframe
-          src="https://www.youtube.com/embed/PJ5nnkbjRhg?autoplay=1&mute=1&rel=0&playsinline=1"
-          title="Favorite travel destination video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
+            src="https://www.youtube.com/embed/PJ5nnkbjRhg?autoplay=1&mute=1&rel=0&playsinline=1"
+            title="Favorite travel destination video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
 
-      <!-- BIO inside a box -->
-      <div class="bio-box">
+    <!-- BIO inside a box -->
+    <div class="bio-box">
         <h2>About me</h2>
         <p>
-          Hi I'm Joshua! I like Archery and Floorball. I don't like sweet food but I love sweet drinks so I don't know if I'm healthy or not, but I eat too much macs for my own good :D
+            Hi I'm Joshua! I like Archery and Floorball. I don't like sweet food but I love sweet drinks so I don't know if I'm healthy or not, but I eat too much macs for my own good :D
         </p>
-      </div>
+    </div>
 
-      <!-- OPTIONAL: extra cards / details -->
-      <div class="grid-two">
+    <!-- Extra cards / details -->
+    <div class="grid-two">
         <div class="bio-box">
-          <h3>Hobbies</h3>
-          <p style="margin-top:4px">• Archery <br>• Floorball <br>• Fishing</p>
+            <h3>Hobbies</h3>
+            <p style="margin-top:4px">• Archery <br>• Floorball <br>• Fishing</p>
         </div>
-        <div class="bio-box">
-          <h3>Favourite Drinks</h3>
-          <p style="margin-top:4px">• Green Tea <br>• Cold Milk<br>• Earl Grey Milk Tea</p>
+            <div class="bio-box">
+                <h3>Favourite Drinks</h3>
+                <p style="margin-top:4px">• Green Tea <br>• Cold Milk<br>• Earl Grey Milk Tea</p>
+            </div>
         </div>
-      </div>
 
-      <footer>"Built with ❤️ — deploy via GitHub Pages"</footer>
+        <footer>"Energy is precious" — someone ancient maybe</footer>
     </section>
 
   </main>
