@@ -1,14 +1,3 @@
-<!--
-  index.html - Personal GitHub Pages template
-  Instructions:
-   1) Upload your smiling photo to the repo root and replace "YOUR_PHOTO.jpg" below.
-   2) Replace VIDEO_ID with the YouTube video id (for https://www.youtube.com/watch?v=abcd1234 -> abcd1234).
-   3) Ensure index.css is in the same repo root (this file loads the styling).
-   4) Save both files to your repository root as index.html and index.css, then enable GitHub Pages (Settings → Pages → branch: main / folder: /root).
-
-  Note: the iframe uses autoplay=1&mute=1 so the video will attempt to autoplay muted on page load. Some browsers restrict autoplay behaviour depending on user settings.
--->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,7 +10,7 @@
 
 <main class="page">
 
-    <!-- LEFT: profile -->
+    <!-- Left col: Profile -->
     <aside class="profile">
         <img class="profile-pic" src="Images/ProfilePic.jpg">
         <div class="name">Joshua</div>
@@ -49,11 +38,11 @@
         </div>
     </aside>
 
-    <!-- RIGHT: content -->
+    <!-- Right col: content -->
     <section class="content">
         <h1>✈️ Favourite Travel Destination — Hokkaido</h1>
 
-    <!-- VIDEO -->
+    <!-- Video -->
     <div class="video-wrap" aria-hidden="false">
         <iframe
             src="https://www.youtube.com/embed/PJ5nnkbjRhg?autoplay=1&mute=1&rel=0&playsinline=1"
@@ -85,43 +74,43 @@
         <footer>"Energy is precious" — someone ancient maybe</footer>
     </section>
 
-  </main>
+</main>
 
-  <!-- Profile Pic Modal -->
+<!-- Profile Pic Modal -->
 <div id="profilePicModal" class="modal">
-  <span class="close" tabindex="0">&times;</span>
-  <img class="modal-content" id="modalImg" src="Images/ProfilePic.jpg" alt="Profile Picture">
+    <span class="close" tabindex="0">&times;</span>
+    <img class="modal-content" id="modalImg" src="Images/ProfilePic.jpg" alt="Profile Picture">
 </div>
 
 <script>
-  const modal = document.getElementById('profilePicModal');
-  const img = document.querySelector('.profile-pic');
-  const modalImg = document.getElementById('modalImg');
-  const closeBtn = document.querySelector('.modal .close');
+    const modal = document.getElementById('profilePicModal');
+    const img = document.querySelector('.profile-pic');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.querySelector('.modal .close');
 
-  img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    closeBtn.focus();
-  }
-
-  closeBtn.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  // Close modal when clicking outside image
-  modal.onclick = function(e) {
-    if (e.target === modal) {
-      modal.style.display = "none";
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        closeBtn.focus();
     }
-  }
 
-  // Close modal with Escape key
-  document.addEventListener('keydown', function(e) {
-    if (e.key === "Escape") {
-      modal.style.display = "none";
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
     }
-  });
+
+    // Close modal when clicking outside image
+    modal.onclick = function(e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+  // Close modal with ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape") {
+            modal.style.display = "none";
+        }
+    });
 </script>
 
 </body>

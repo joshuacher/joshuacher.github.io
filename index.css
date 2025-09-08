@@ -13,7 +13,14 @@ html, body {
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background:linear-gradient(180deg,var(--bg),#d6d3ff);
+  /* New gradient: dark → light → dark, works for tall screens */
+  background: linear-gradient(
+    180deg,
+    var(--bg) 0%,
+    #d6d3ff 40%,
+    #d6d3ff 60%,
+    var(--bg) 100%
+  );
   color:#111827;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -24,20 +31,38 @@ body{
 }
 
 .page {
-  width:100%;
-  max-width:1000px;
-  background:var(--card);
-  border-radius:18px;
-  padding:28px;
-  box-shadow:0 10px 30px rgba(16,24,40,0.08);
-  display:grid;
-  grid-template-columns: 320px 1fr;
-  gap:28px;
-  align-items:start;
+  width: 100%;
+  max-width: 900px; /* increased from 820px */
+  background: var(--card);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
 @media (max-width:780px){
   .page{grid-template-columns:1fr; padding:18px}
+  .profile-pic {
+    width: 40vw;
+    height: 40vw;
+    max-width: 220px;
+    max-height: 220px;
+    min-width: 100px;
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 780px) {
+  body {
+    align-items: flex-start;
+    padding: 16px 4px;
+  }
+  .page {
+    margin-top: 0;
+  }
 }
 
 /* ---------- Left column: profile ---------- */
@@ -46,8 +71,12 @@ body{
 }
 
 .profile-pic{
-  width:200px;
-  height:200px;
+  width: 200px;
+  height: 200px;
+  max-width: 80vw;   /* Responsive: never overflow */
+  max-height: 40vw;  /* Responsive: never overflow */
+  min-width: 120px;
+  min-height: 120px;
   border-radius:50%;
   object-fit:cover;
   display:block;
@@ -79,7 +108,20 @@ body{
 }
 
 /* ---------- Right column: content ---------- */
-.content h1{margin-top:0}
+.content h1 {
+  white-space: nowrap; /* keep heading on one line */
+  font-size: 1.65rem; /* adjust as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .content h1 {
+    font-size: 1.2rem;
+    white-space: normal; /* allow wrapping on small screens */
+  }
+}
 
 /* responsive video */
 .video-wrap{
@@ -100,11 +142,10 @@ body{
 }
 
 .spotify-box {
-    width: 80%;
-    height: 100%;
-    border: none;
-    margin-top: 60px;
-    justify-self: center;
+  width: 100%; /* was 80% */
+  margin-top: 40px; /* reduced from 60px */
+  overflow: visible; /* ensure no scrollbars */
+  height: auto; /* ensure it grows with content */
 }
 
 .spotify-box h3 {
