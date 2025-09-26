@@ -180,9 +180,6 @@ function filter_by_category_alcoholic_name() {
     console.log("[END] filter_by_category_alcoholic_name()");
 }
 
-
-
-
 // DO NOT MODIFY THE BELOW LINES
 get_all_drinks();
 populate_category_dropdown();
